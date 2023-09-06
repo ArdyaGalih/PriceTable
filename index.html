@@ -2,126 +2,63 @@
 <html>
 
 <head>
-  <title>Ardya Cloud Pricing</title>
+  <title>Flexbox Pricing Table</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-image: url(backgron.jpg);
+      font-family: 'Sono', sans-serif;
+      background-image: url(./backgron.jpg);
       background-size: cover;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex; /* Menjadikan body sebagai flex container */
+      justify-content: center; /* Mengatur horizontal centering */
+      align-items: center; /* Mengatur vertical centering */
+      height: 100vh; /* Mengisi seluruh tinggi viewport */
 
-    .header {
-      background: rgba(126, 117, 117, 0.333);
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 24px;
-      font-weight: 700;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
-
-    .header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 36px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-
-    .header p {
-      font-size: 18px;
-    }
-
+    
     .pricing-container {
       display: flex;
+      gap: 20px;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
     }
-
     .pricing-plan {
-      background: rgba(126, 117, 117, 0.333);
-      border-radius: 5px;
-      padding: 30px;
-      width: 350px;
-      margin: 10px;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      color: white;
+      background-color: aquamarine;
+      gap: 10px;
+      min-width: 300px;
       text-align: center;
     }
-
-    .plan-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .plan-price {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
     .plan-features {
-      list-style-type: none;
+      list-style:none;
       padding: 0;
-      margin: 0;
     }
-
-    .plan-features li {
-      font-size: 20px;
-      margin-bottom: 5px;
+    .plan-title {
+      margin-top:1rem ;
     }
-
     .plan-button {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 5px;
-      font-size: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      margin-bottom: 1rem;
     }
 
-    .plan-button:hover {
-      background-color: #0056b3;
-    }
 
-    footer {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    @media (max-width: 768px) {
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       .pricing-plan {
-        width: 100%;
+        height: 100%;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="header">
-    <h1>ARDYA CLOUD</h1>
-    <p>Your Cloud Hosting Solutions</p>
-  </div>
-
   <div class="pricing-container">
-
     <div class="pricing-plan">
       <div class="plan-title">Basic</div>
       <div class="plan-price">$9.99/month</div>
@@ -130,9 +67,8 @@
         <li>✅ 1 User</li>
         <li>🚫 Support</li>
       </ul>
-      <button class="plan-button">Sign Up</button>
+      <button class="plan-button">Sign Up</a>
     </div>
-
     <div class="pricing-plan">
       <div class="plan-title">Standard</div>
       <div class="plan-price">$19.99/month</div>
@@ -140,10 +76,10 @@
         <li>✅ 50GB Storage</li>
         <li>✅ 5 Users</li>
         <li>✅ Phone &amp; Email Support</li>
-      </ul>
-      <button class="plan-button">Sign Up</button>
-    </div>
 
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
     <div class="pricing-plan">
       <div class="plan-title">Premium</div>
       <div class="plan-price">$49.99/month</div>
@@ -152,14 +88,9 @@
         <li>✅ 10 Users</li>
         <li>✅ 24/7 Support</li>
       </ul>
-      <button class="plan-button">Sign Up</button>
+      <button class="plan-button">Sign Up</a>
     </div>
-
   </div>
-
-  <footer>
-    &copy; 2023 Ardya Cloud
-  </footer>
 
 </body>
 
